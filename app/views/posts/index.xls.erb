@@ -1,0 +1,28 @@
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>Titulo</th>
+		<th>Conteudo</th>
+		<th>Criado em</th>
+		<th>Atualizado em</th>
+		<th>Nome da imagem</th>
+		<th>Tipo da imagem</th>
+		<th>Tamanho</th>
+		<th>Imagem atualizada em</th>
+	</tr>
+
+	<% @posts.each do |post| %>
+	  <tr>
+		<td><%= post.id %></td>
+		<td><%= post.title %></td>
+		<td><%= post.body %></td>
+		<td><%= post.created_at %></td>
+		<td><%= post.updated_at %></td>
+		<td><%= post.avatar_file_name %></td>
+		<td><%= post.avatar_content_type %></td>
+		<td><%= post.avatar_file_size %></td>
+		<td><%= post.avatar_updated_at %></td>		
+	  </tr>
+	<% end %>
+
+</table>

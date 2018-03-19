@@ -1,0 +1,43 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1, h4, h2, #buttons {	
+	font-family: "Raleway", sans-serif;
+    margin-left: 45px;
+}
+
+#search {
+	margin-left: 32px;
+}
+
+.my_card {
+	margin-right: 0em;
+    margin-left: 0em;
+}
+
+
+#button_search {
+	margin-left: 24px;
+}
+
+img {
+	width: 100%;
+}
+
+#all {
+	width: 80%;
+  margin-left: 18em;
+}
+
+

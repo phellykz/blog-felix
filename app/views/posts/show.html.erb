@@ -1,0 +1,34 @@
+<div id="all">
+<div id="post_content">
+  <h1 class="title"><%= @post.title %></h1> 
+  <p class="body"><%= @post.body %></p><br>
+  <p class="date">Submitted <%= time_ago_in_words(@post.created_at) %></p>
+  <p class="img"><%= image_tag @post.avatar.url(:thumb) %></p><br>
+    <% if user_signed_in? %>
+      <% if current_user.admin? %>  
+      <%= link_to t('.back', :default => t("helpers.links.back")),
+        posts_path, :class => 'btn btn-default'  %>
+      <%= link_to t('.edit', :default => t("helpers.links.edit")),
+        edit_post_path(@post), :class => 'btn btn-default' %>
+      <%= link_to t('.destroy', :default => t("helpers.links.destroy")), post_path(@post, type: :normal), :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger' %>
+      <% end %>
+    <% end %>
+
+  <div id="comments">
+    <h2><%= @post.comments.count %> Comments</h2>
+    <%= render @post.comments %>
+
+
+    <h3>Add a comment:</h3>
+    <%= render "comments/form" %>
+    
+  </div>
+</div>
+
+</div>
+
+
+<br><br><br><br>
+
+<h3><%= link_to '<== Home', root_path %></h3>
