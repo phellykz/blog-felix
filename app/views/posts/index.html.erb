@@ -11,14 +11,11 @@
 
 
 <div class="w3-card-4 w3-margin w3-white">
-<!--<div class="w3-row">-->
 <% @posts.each do |post| %>
 
 
-<!-- Blog entries -->
 <div class="w3-col 18 s12">
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-card-4 w3-margin w3-white thumbnail">
     <img ><%= image_tag post.avatar.url(:thumb) %></img>
     <div class="w3-container">
       <h3><b><%= link_to post.title, post %> </b></h3>
@@ -54,11 +51,11 @@
 			<%= link_to 'CSV', posts_path(format: "csv"), :id => 'buttons', :class => 'btn btn-default' %>
 			<%= link_to 'Excel', posts_path(format: "xls"), :id => 'buttons', :class => 'btn btn-default' %>
 		</p><hr><hr><br>
-		<h2>Deleted Posts: </h2> 
+
+
+
+	<h2>Deleted Posts: </h2> 
 	</div>
-
-
-
 	<% @posts.only_deleted.each do |post| %>
 	<div class="w3-card-4 w3-margin w3-white">
 

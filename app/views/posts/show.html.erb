@@ -1,5 +1,5 @@
 <div id="all">
-<div id="post_content">
+<div class="thumbnail" id="post_content">
   <h1 class="title"><%= @post.title %></h1> 
   <p class="body"><%= @post.body %></p><br>
   <p class="date">Submitted <%= time_ago_in_words(@post.created_at) %></p>
@@ -14,17 +14,21 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger' %>
       <% end %>
     <% end %>
+</div>
 
-  <div id="comments">
+<div>
+  <div class="thumbnail" id="comments">
     <h2><%= @post.comments.count %> Comments</h2>
     <%= render @post.comments %>
 
-
-    <h3>Add a comment:</h3>
-    <%= render "comments/form" %>
     
   </div>
 </div>
+
+<div class="add_comments">
+      <h3>Add a comment:</h3>
+      <%= render "comments/form" %>
+    </div>
 
 </div>
 

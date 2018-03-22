@@ -14,16 +14,10 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-      #@post = Post.find(params[:post_id])
-      #@comment = @post.comments.find(params[:id])
-      #@comment.destroy
-
-      #redirect_to post_path(@post)
-
-
+      
       @post = Post.find(params[:post_id])
       @comment = @post.comments.with_deleted.find(params[:id])
-      #@post = Post.with_deleted.find(params[:id])
+      
 
       if params[:type] == 'normal'
         @comment.destroy
