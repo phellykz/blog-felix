@@ -4,7 +4,8 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :body
       t.references :post, index: true
-
+      t.date :deleted_at
+      
       t.timestamps
     end
   end

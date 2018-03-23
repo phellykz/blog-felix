@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  acts_as_paranoid
+  #acts_as_paranoid
   enum role: [:normal_user, :admin]
 
   # Include default devise modules. Others available are:
