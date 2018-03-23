@@ -1,9 +1,4 @@
-/*
-  =require twitter-bootstrap-static/bootstrap
 
-  Static version of css will use Glyphicons sprites by default
-  =require twitter-bootstrap-static/sprites
-*/
 .container-fluid {
     width: 100%;
     padding-right: 15px;
@@ -14,7 +9,7 @@
 
 h1, h4, h2, #buttons {	
 	font-family: "Raleway", sans-serif;
-    margin-left: 45px;
+  margin-left: 45px;
 }
 
 #search {
@@ -52,5 +47,9 @@ body{
 
 .navbar-fixed-top{
   box-shadow: black 0 0 5px;
-  opacity: 0.3;
+  opacity: 0.6;
+}
+
+.row{
+      margin-top: 3em;
 }
